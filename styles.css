@@ -1,0 +1,534 @@
+body{
+    background-color: #000000;
+    color: white;
+    
+}
+.global_navbar{
+    font-family: Manrope;
+    width: 100%;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ul{
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+        span{
+            color: white;
+        }
+    }
+}
+#homepage{
+    margin: 0px;
+    #main-body{
+        background-image: url('../deep_space_website/public/images/horizon_bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95%;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #left-container{
+            font-family: DM Sans;
+            width: 50%;
+            h1{
+                font-size: 120px;
+                font-weight: bold;
+                padding: 0;
+                margin: 0;
+                line-height: 90%;
+            }
+            h1:last-child{
+                color: #076BB6;
+            }
+            #button-container{
+                display: flex;
+                margin: 30px 0px;
+                button{
+                    width: 30%;
+                    padding: 20px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    background-color: transparent;
+                    color: white;
+                    border: 2px solid #076BB6;
+                    border-radius: 10px;
+                    &:first-child{
+                        margin-right: 20px
+                    }
+                }
+            }
+        };
+        #right-container{
+            width: 50%;
+            /* height: 100%; */
+            /* background-color: #07B68D; */
+            #right-inner{
+                background-color: #1B2740;
+                border-radius: 15px;
+                display: flex;
+                /* justify-content: space-evenly; */
+                align-items: center;
+                #page-nav{
+                    padding: 20px;
+                    display: block;
+                    justify-content: center;
+                    align-self: center;
+                    width: 40%;
+                    .nav-btns{
+                        padding: 40px;
+                        margin: 30px 0px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 15px;
+                    }
+                    #apollo-btn{
+                        background-color: #7E6EA4;
+                        width: 200px;
+                        height: 200px;
+                        img{
+                            height: 120px;
+                        }
+                    }
+                    #nasa-btn{
+                        background-color: #707E9A;
+                        width: 120px;
+                        height: 120px;
+                        img{
+                            height: 60px;
+                        }
+                    }
+                }
+                #slide-anims{
+                    width: 60%;
+                    height: 50vh;
+                    margin: 40px 0px;
+                    position: relative;
+                    .slide-boxes{
+                        position: absolute;
+                        border-radius: 20px;
+                        height: 90%;
+                        width: 70%;
+                        /* top: 0px */
+                    }
+                    #aux-slide-1{
+                        top: 0px;
+                        left: 40px;
+                        background-color: #1B2740;
+                        border: 2px solid #07B68D;
+                    }
+                    #aux-slide-2{
+                        top: 15px;
+                        left: 30px;
+                        background-color: #1B2740;
+                        border: 2px solid #B67307;
+                    }
+                    #aux-slide-3{
+                        top: 30px;
+                        left: 20px;
+                        background-color: #1B2740;
+                        border: 2px solid #973131;
+                    }
+                    #main-slide{
+                        /* z-index: 1; */
+                        top: 45px;
+                        left: 10px;
+                        background-color: #076ab6;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        };
+    }
+}
+
+#nasa-page{
+    background-image: url('../deep_space_website/public/images/nasa-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    #background-fade{
+        background-color: #00000099;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        position: fixed;
+    }
+    margin: 0px;
+    padding: 0px 40px;
+    font-family: Manrope;
+    #main-body{
+        margin-top: 50px;
+        height: 100%;
+        #intro{
+            margin: 30px;
+            overflow: hidden;
+            h1{
+                text-align: center;
+                margin: 20px 0px;
+            }
+            #intro-article {
+                #img-container{
+                    float: left;
+                    margin-right: 15px;
+                    width: 40%;
+                    padding: 30px;
+                    opacity: 60%;
+                    position: relative;
+                    .article-img{
+                        width: 100%;
+                    }
+                    .article-logo{
+                        width: 20%;
+                        position: absolute;
+                        top: 40%;
+                        right: 40%;
+                    }
+                }
+                #text-container{
+                    padding: 30px;
+                }
+            }
+        }
+        #achievments{
+            margin: 100px 0px;
+            padding: 30px;
+            font-size: 20px;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            h1{
+                text-align: center;
+            }
+            #list-container{
+                li{
+                    margin: 20px;
+                }
+            }
+        }
+        #space-shuttles{
+            padding: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            #grid-container{
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                width: 70%;
+                aspect-ratio: 4 / 3;
+                gap: 4px;
+                padding: 4px;
+                /* border: 1px solid hsl(210deg 8% 50%); */
+                border-radius: 4px;
+                .shuttle-box{
+                    background-color: #0000008b;  
+                    display: grid;
+                    place-content: center;
+                    overflow: hidden;
+                    border-radius: 2px;
+                    color: white;
+                    font-weight: bold;      
+                    position: relative;  
+                    justify-content: center;
+                    align-items: center;   
+                    border-radius: 10px;
+                    margin: 10px;
+                    img{
+                        position: absolute;
+                        margin: auto;
+                        z-index: -1;
+                    }
+                    .intext-box{
+                        position: absolute;
+                        width: 100%;
+                        /* text-align: left; */
+                        top: 0px;
+                        padding: 20px;
+                        h3{
+                            font-size: 35px;
+                            font-weight: bold;
+                            margin: 0px;
+                        }
+                        p{
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 900;
+                        }
+                    }
+                }
+                .text-box{
+                    height: 100%;
+                    border-radius: 10px;
+                }
+                #shuttle-1{
+                    grid-column: span 3;
+                    img{
+                        width: 100%;
+                    }
+                }
+                #text-box-1{
+                    grid-column: span 2;
+                    display: flex;
+
+                    #text-container{
+                        margin-top: auto;
+                        padding: 10px;
+                        h1{
+                            font-size: 50px;
+                            margin: 0px;
+                        }
+                    }
+                }
+                #shuttle-2{
+                    grid-column: span 2;
+                    grid-row: span 3;
+                    img{
+                        height: 100%;
+                    }
+
+                }
+                #shuttle-3{
+                    grid-row: span 1;
+                    grid-column: span 3;
+                    img{
+                        width: 100%;
+                    }
+                }
+                #shuttle-4{
+                    grid-row: span 2;
+                    grid-column: span 2;
+                    img{
+                        height: 100%;
+                    }
+                }
+                #text-box-2{
+                    grid-row: span 2;
+                    display: flex;
+                    #text-box-2_wrapper{
+                        margin: auto;
+                        h1{
+                            font-size: 60px;
+                            margin: 0px;
+                        }
+                        p{
+                            font-size: 20px;
+                            margin: 0px;
+                        }
+                        #missions-metric{
+                            h1{
+                                color: #6B75FF;
+                            }
+                        }
+                        #shuttles-metric{
+                            h1{
+                                color: #278EDC;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        #space-station{
+            display: flex;
+            justify-content:center;
+            padding: 100px;
+            #image{
+                background-color: #000000;
+                width: 40%;
+                margin-right: 30px;
+                position: relative;
+                #text-container{
+                    position: absolute;
+                    bottom: 0px;
+                    padding: 20px;
+                    h1{
+                        font-size: 70px;
+                        margin: 0%;
+                        font-weight: bold;
+                    }
+                }
+                img{
+                    width: 100%;
+                    opacity: 50%;
+                }
+            }
+            #text{
+                width: 40%;
+            }
+        }
+
+        #nasa-iotd{
+            width: 100%;
+            text-align: center;
+            margin-top: 300px;
+            h1{
+                padding: 30px;
+            }
+            img{
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+#apollo-page{
+    background-image: url('./public/images/apollo-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    font-family: Manrope;
+    #background-fade{
+        background-color: #000000bf;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+    }
+    #main-body{
+        padding: 50px;
+        #top-section{
+            background-color: #040815b6;  
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            place-content: center;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            #apollo-logo{
+                position: absolute;
+                width: 100px;
+                right: 0px;
+                margin: 30px;
+            }
+            #apollo-pic{
+                position: absolute;
+                margin: -500px 0px -100px 0px;
+                z-index: -1;
+                width: 100%;
+                transform: scaleX(-1);
+            }
+            #big-text-container{
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                padding: 20px;
+                margin: 50px 300px;
+                .heading{
+                    font-size: 60px;
+                    margin: 0px;
+                    line-height: 40px;
+                }
+                #top-side{
+                    display: flex;
+                    position: relative;
+                    #big-number{
+                        font-size: 200px;
+                        line-height: 190px;
+                        font-weight: bold;
+                        margin: 0px;
+                    }
+                    #text{
+                        position: absolute;
+                        margin-top: auto;
+                        top: 130.5px;
+                        left: 113.5px;
+                    }
+                }
+                #bottom-side{
+                    #text{
+                        margin-left: 35px;
+                    }
+                }
+                #quote{
+                    font-size: 18px;
+                    font-family: DM Sans;
+                    font-weight: 100;
+                    margin-left: 35px;
+
+                }
+                span{
+                    font-size: 21;
+                    font-weight: 800;
+                    margin-left: 10px;
+                }
+            }
+            #metric-section{
+                background-color: #707e9a37;
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 200px 10px 200px;
+                width: 50%;
+                margin: auto;
+                margin-bottom: 40px;
+                border-radius: 10px;
+                span{
+                    font-size: 60px;
+                }
+                .item{
+                    text-align: center;
+                    h5{
+                        margin: 0px;
+                        font-size: 60px;
+                    }
+                    h1{
+                        font-size: 200px;
+                        margin: 0px;
+                        line-height: 180px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.global_footer{
+    background-color: #151515;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: Manrope;
+    .left-section{
+        padding: 50px;
+        width: 50%;
+        .name-logo-box{
+            display: flex;
+            align-items: center;
+            h1{
+                font-size: 40px;
+                margin: 0px;
+            }
+            img{
+                height: 50px;
+                margin: 20px;
+                border-radius: 50%;
+            }
+        }
+    }
+    .right-section{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .social-media-icons{
+            margin: 30px;
+        }
+    }
+}

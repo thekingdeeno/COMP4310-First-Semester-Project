@@ -567,6 +567,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-position-y: 60%;
     margin: 0px;
     font-family: Marcellus;
     #background-fade{
@@ -636,9 +637,6 @@ body{
                             font-weight: 900;
                             font-size: 20px;
                         }
-                        p{
-
-                        }
                     }
                 }
                 #link-icons{
@@ -649,6 +647,36 @@ body{
                         margin-right: 20px;
                     }
                 }
+            }
+        }
+    }
+}
+
+#references-page{
+    background-image: url('/deep_space_website/public/images/references-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: 70%;
+    margin: 0px;
+    font-family: Marcellus;
+    #background-fade{
+        background-color: #000000a2;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        position: fixed;
+    };
+    #main-body{
+        margin: 60px;
+        min-height: 50%;
+        #content{
+            width: 65%;
+            h1{
+                font-size: 100px;
+            }
+            p{
+                font-size: 20px;
             }
         }
     }

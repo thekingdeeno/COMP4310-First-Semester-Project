@@ -157,6 +157,180 @@ body{
     }
 }
 
+#apollo-page{
+    background-image: url('./public/images/apollo-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    font-family: Manrope;
+    #background-fade{
+        background-color: #000000bf;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        position: fixed;
+    }
+    #main-body{
+        padding: 50px;
+        #top-section{
+            background-color: #040815b6;  
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            place-content: center;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            #apollo-logo{
+                position: absolute;
+                width: 100px;
+                right: 0px;
+                margin: 60px;
+            }
+            #apollo-pic{
+                position: absolute;
+                margin: -500px 0px -100px 0px;
+                z-index: -1;
+                width: 100%;
+                transform: scaleX(-1);
+            }
+            #big-text-container{
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                padding: 20px;
+                margin: 50px 300px;
+                .heading{
+                    font-size: 60px;
+                    margin: 0px;
+                    line-height: 40px;
+                }
+                #top-side{
+                    display: flex;
+                    position: relative;
+                    #big-number{
+                        font-size: 200px;
+                        line-height: 190px;
+                        font-weight: bold;
+                        margin: 0px;
+                    }
+                    #text{
+                        position: absolute;
+                        margin-top: auto;
+                        top: 130.5px;
+                        left: 113.5px;
+                    }
+                }
+                #bottom-side{
+                    #text{
+                        margin-left: 35px;
+                    }
+                }
+                #quote{
+                    font-size: 18px;
+                    font-family: DM Sans;
+                    font-weight: 100;
+                    margin-left: 35px;
+
+                }
+                span{
+                    font-size: 21;
+                    font-weight: 800;
+                    margin-left: 10px;
+                }
+            }
+            #metric-section{
+                background-color: #707e9a37;
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 200px 20px 200px;
+                width: 50%;
+                margin: auto;
+                margin-bottom: 40px;
+                border-radius: 10px;
+                span{
+                    font-size: 60px;
+                }
+                .item{
+                    text-align: center;
+                    h5{
+                        margin: 0px;
+                        font-size: 60px;
+                    }
+                    h1{
+                        font-size: 200px;
+                        margin: 0px;
+                        line-height: 180px;
+                    }
+                }
+            }
+        }
+        #missions{
+            text-align: center; 
+            margin: 200px 0px;
+            #header{
+                font-size: 55px;
+                padding: 30px;
+            }
+            #carousel-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin: 20px 0px;
+                #active-carousel{
+                    width: 50%;
+                    height: 50%;
+                    position: relative;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    #active-carousel-image{
+                        width: 100%;
+                    }
+                    #carousel-options{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                        background-color: #000000c2;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        #active-carousel-label{
+                            font-size: 80px;
+                        }
+                        .carousel-buttons{
+                            padding: 0px;
+                            margin: 0px;
+                            border: none;
+                            background-color: rgba(0, 0, 0, 0);
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            #active-carousel-indicator{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 30px;
+                margin: 30px;
+                .carousel-indicator{
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 50%;
+                    background-color: #ffffff;
+                    margin: 15px;
+                }
+                .active{
+                    background-color: #D21111;
+                }
+            }
+        }
+    }
+}
+
 #nasa-page{
     background-image: url('../deep_space_website/public/images/nasa-bg.jpg');
     background-repeat: no-repeat;
@@ -388,174 +562,92 @@ body{
     }
 }
 
-#apollo-page{
-    background-image: url('./public/images/apollo-bg.jpg');
+#contact-page{
+    background-image: url('/deep_space_website/public/images/contact-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     margin: 0px;
-    font-family: Manrope;
+    font-family: Marcellus;
     #background-fade{
-        background-color: #000000bf;
+        background-color: #00000068;
         height: 100%;
         width: 100%;
         z-index: -1;
         position: fixed;
-    }
+    };
     #main-body{
-        padding: 50px;
-        #top-section{
-            background-color: #040815b6;  
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-            place-content: center;
-            justify-content: center;
-            align-items: center;
-            margin: 0px;
-            #apollo-logo{
-                position: absolute;
-                width: 100px;
-                right: 0px;
-                margin: 30px;
-            }
-            #apollo-pic{
-                position: absolute;
-                margin: -500px 0px -100px 0px;
-                z-index: -1;
-                width: 100%;
-                transform: scaleX(-1);
-            }
-            #big-text-container{
-                justify-content: center;
-                align-items: center;
-                width: 20%;
-                padding: 20px;
-                margin: 50px 300px;
-                .heading{
-                    font-size: 60px;
-                    margin: 0px;
-                    line-height: 40px;
-                }
-                #top-side{
-                    display: flex;
-                    position: relative;
-                    #big-number{
-                        font-size: 200px;
-                        line-height: 190px;
-                        font-weight: bold;
-                        margin: 0px;
-                    }
-                    #text{
-                        position: absolute;
-                        margin-top: auto;
-                        top: 130.5px;
-                        left: 113.5px;
-                    }
-                }
-                #bottom-side{
-                    #text{
-                        margin-left: 35px;
-                    }
-                }
-                #quote{
-                    font-size: 18px;
-                    font-family: DM Sans;
-                    font-weight: 100;
-                    margin-left: 35px;
-
-                }
-                span{
-                    font-size: 21;
-                    font-weight: 800;
-                    margin-left: 10px;
-                }
-            }
-            #metric-section{
-                background-color: #707e9a37;
-                display: flex;
-                justify-content: space-between;
-                padding: 20px 200px 10px 200px;
+        padding: 30px 100px;
+        margin: 50px 100px 200px 100px;
+        #top-container{
+            width: 50%;
+            #title{
+                font-size: 100px;
+                margin: 0px
+            };
+            #subheading{
+                font-size: 25px;
                 width: 50%;
-                margin: auto;
-                margin-bottom: 40px;
-                border-radius: 10px;
-                span{
-                    font-size: 60px;
-                }
-                .item{
-                    text-align: center;
-                    h5{
-                        margin: 0px;
-                        font-size: 60px;
-                    }
-                    h1{
-                        font-size: 200px;
-                        margin: 0px;
-                        line-height: 180px;
-                    }
-                }
-            }
+            };
         }
-        #missions{
-            text-align: center; 
-            margin: 200px 0px;
-            #header{
-                font-size: 55px;
-                padding: 30px;
-            }
-            #carousel-container{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                margin: 20px 0px;
-                #active-carousel{
-                    width: 50%;
-                    height: 50%;
-                    position: relative;
-                    border-radius: 10px;
-                    overflow: hidden;
-                    #active-carousel-image{
+        #bottom-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            #form-container{
+                width: 45%;
+                form{
+                    margin: 0px;
+                }
+                .form-input{
+                    padding: 20px 0px;
+                    input{
+                        font-family: Marcellus;
+                        background-color: #00000000;
+                        border: none;
+                        border-bottom: 1px solid #ffffff;
+                        padding: 10px 5px;
+                        font-size: 18px;
                         width: 100%;
-                    }
-                    #carousel-options{
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        z-index: 1;
-                        background-color: #000000c2;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-evenly;
-                        #active-carousel-label{
-                            font-size: 80px;
-                        }
-                        .carousel-buttons{
-                            padding: 0px;
-                            margin: 0px;
-                            border: none;
-                            background-color: rgba(0, 0, 0, 0);
-                            color: white;
+                        color: #ffffff;
+                        &::placeholder{
+                            color: #ffffff;
                         }
                     }
                 }
+                #submit-button{
+                    font-family: Marcellus;
+                    font-size: 18px;
+                    width: 100%;
+                    padding: 20px;
+                    margin-top: 10px;
+                    background-color: #696969;
+                    color: #ffffff;
+                }
             }
+            #contact-details{
+                width: 40%;
+                #details{
+                    .detail{
+                        line-height: 50%;
+                        margin: 30px 0px;
+                        h3{
+                            color: #868686;
+                            font-weight: 900;
+                            font-size: 20px;
+                        }
+                        p{
 
-            #active-carousel-indicator{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 30px;
-                margin: 30px;
-                .carousel-indicator{
-                    height: 15px;
-                    width: 15px;
-                    border-radius: 50%;
-                    background-color: #ffffff;
-                    margin: 15px;
+                        }
+                    }
                 }
-                .active{
-                    background-color: #D21111;
+                #link-icons{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        height: 30px;
+                        margin-right: 20px;
+                    }
                 }
             }
         }
@@ -563,7 +655,7 @@ body{
 }
 
 .global_footer{
-    background-color: #151515;
+    background-color: #151515a2;
     color: white;
     display: flex;
     align-items: center;

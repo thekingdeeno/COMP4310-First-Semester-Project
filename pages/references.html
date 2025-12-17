@@ -1,52 +1,83 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="../styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Marcellus&display=swap" rel="stylesheet">
+        <title>References</title>
     </head>
     <body id="references-page">
         <div id="background-fade"></div>
         <div class="global_navbar">
-            <ul>
+            <div>
                 <li><a href="../pages/index.html">HOME</a></li><span>|</span>
                 <li><a href="../pages/apollo.html">APOLLO</a></li><span>|</span>
                 <li><a href="../pages/nasa.html">NASA</a></li><span>|</span>
                 <li><a href="../pages/contact.html">CONTACT</a></li><span>|</span>
                 <li><a href="../pages/references.html">REFERENCES</a></li>
-            </ul>
+            </div>
+        </div>
+            <div class="global_hamburger-menu">
+            <div class="main-content">
+                <div>
+                    <a href="javascript:void(0);" class="hamburger-icon" onclick="toggleHamburgerMenu()">
+                        <img src="../public/assets/hamburger-menu.svg" alt="">
+                    </a>
+                </div>
+                <div class="hamburger-logo">
+                    <a href="../pages/index.html" class="menu-logo"><img src="../public/images/deeno-logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="sub-navbar-content closed">
+                <li><a href="../pages/index.html">HOME</a></li>
+                <li><a href="../pages/apollo.html">APOLLO</a></li>
+                <li><a href="../pages/nasa.html">NASA</a></li>
+                <li><a href="../pages/contact.html">CONTACT</a></li>
+                <li><a href="../pages/references.html">REFERENCES</a></li>
+            </div>
         </div>
         <div id="main-body">
             <div id="content">
                 <h1>References</h1>
-                <p>Adams, L.R. and Choudhury, M.K., 2022. Living beyond Earth: Designing habitats for the Moon and Mars. Orbital Press.</p>
-                <p>Adams, L.R. and Choudhury, M.K., 2022. Living beyond Earth: Designing habitats for the Moon and Mars. Orbital Press.</p>
-                <p>Adams, L.R. and Choudhury, M.K., 2022. Living beyond Earth: Designing habitats for the Moon and Mars. Orbital Press.</p>
+                <p>NASA (2023). The Apollo Program - NASA. [online] NASA. Available at: https://www.nasa.gov/the-apollo-program/.</p>
+                <p>Howell, E. (2024). International Space Station: Facts, History & Tracking. [online] Space.com. Available at: https://www.space.com/16748-international-space-station.html.</p>
+                <p>Wikipedia Contributors (2019). NASA. [online] Wikipedia. Available at: https://en.wikipedia.org/wiki/NASA.</p>
             </div>
         </div>
-    <footer class="global_footer">
-    <div class="left-section">
-        <div class="name-logo-box">
-            <h1>Nwando Ifezue</h1>
-            <img src="../public/images/deeno-logo.png" alt="">
+        <footer class="global_footer">
+        <div class="left-section">
+            <div class="name-logo-box">
+                <h1>Nwando Ifezue</h1>
+                <img src="../public/images/deeno-logo.png" alt="">
+            </div>
+            <p>Full stack software engineer, graphic designer and video editor. I play football as well and make funny content on TikTok, Twitch and YouTube</p>
+            <p>2025 DeenoTech. All Rights Reserved</p>
         </div>
-        <p>Full stack software engineer, graphic designer and video editor. I play football as well and make funny content on TikTok, Twitch and YouTube</p>
-        <p>2025 DeenoTech. All Rights Reserved</p>
-    </div>
-    <div class="right-section">
-        <div class="social-media-icons">
-            <img src="../public/assets/x.svg" alt="">
+        <div class="right-section">
+            <a href="https://x.com/ifezue_king" target="_blank">
+                <div class="social-media-icons">
+                    <img src="../public/assets/x.svg" alt="">
+                </div>
+            </a>
+            <a href="https://www.instagram.com/ifezue_king/" target="_blank">
+                <div class="social-media-icons">
+                    <img src="../public/assets/instagram.svg" alt="">
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/nwando-ifezue-979a99273/" target="_blank">
+                <div class="social-media-icons">
+                    <img src="../public/assets/linkedin.svg" alt="">
+                </div>
+            </a>
+            <a href="https://github.com/thekingdeeno" target="_blank">
+                <div class="social-media-icons">
+                    <img src="../public/assets/github.svg" alt="">
+                </div>
+            </a>
         </div>
-        <div class="social-media-icons">
-           <img src="../public/assets/instagram.svg" alt="">
-        </div>
-        <div class="social-media-icons">
-            <img src="../public/assets/linkedin.svg" alt="">
-        </div>
-        <div class="social-media-icons">
-            <img src="../public/assets/github.svg" alt="">
-        </div>
-    </div>
-    </footer>
+        </footer>
+        <script src="../index.js"></script>
     </body>
 </html>

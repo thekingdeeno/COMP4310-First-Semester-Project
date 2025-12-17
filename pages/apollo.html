@@ -1,19 +1,43 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="../styles.css">
         <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Apollo</title>
+
     </head>
     <body id="apollo-page">
         <div id="background-fade"></div>
         <div class="global_navbar">
-            <ul>
+            <div>
                 <li><a href="../pages/index.html">HOME</a></li><span>|</span>
                 <li><a href="../pages/apollo.html">APOLLO</a></li><span>|</span>
                 <li><a href="../pages/nasa.html">NASA</a></li><span>|</span>
                 <li><a href="../pages/contact.html">CONTACT</a></li><span>|</span>
                 <li><a href="../pages/references.html">REFERENCES</a></li>
-            </ul>
+            </div>
+        </div>
+        <div class="global_hamburger-menu">
+            <div class="main-content">
+                <div>
+                    <a href="javascript:void(0);" class="hamburger-icon" onclick="toggleHamburgerMenu()">
+                        <img src="../public/assets/hamburger-menu.svg" alt="">
+                    </a>
+                </div>
+                <div class="hamburger-logo">
+                    <a href="../pages/index.html" class="menu-logo"><img src="../public/images/deeno-logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="sub-navbar-content closed">
+                <li><a href="../pages/index.html">HOME</a></li>
+                <li><a href="../pages/apollo.html">APOLLO</a></li>
+                <li><a href="../pages/nasa.html">NASA</a></li>
+                <li><a href="../pages/contact.html">CONTACT</a></li>
+                <li><a href="../pages/references.html">REFERENCES</a></li>
+            </div>
         </div>
         <div id="main-body">
             <div id="top-section">
@@ -28,8 +52,7 @@
                     </div>
                     <p id="quote">“That’s one small step for a man. One giant leap for mankind.”   <span>  Neil Armstrong</span></p>
                 </div>
-                <div id="metric-section">
-
+                <div class="metric-section inside">
                     <div class="item">
                         <h5>Failed</h5>
                         <h1>2</h1>
@@ -46,37 +69,49 @@
                     </div>
                 </div>
             </div>
+            <div class="metric-section outside">
+                    <div class="item">
+                        <h5>Failed</h5>
+                        <h1>2</h1>
+                    </div>
+                    <span>|</span>
+                    <div class="item">
+                        <h5>Landings</h5>
+                        <h1>6</h1>
+                    </div>
+                    <span>|</span>
+                    <div class="item">
+                        <h5>Crewed</h5>
+                        <h1>11</h1>
+                    </div>
+                </div>
             <div id="missions">
                 <h1 id="header">MISSIONS</h1>
 
                 <div id="carousel-container">
-                    <div id="active-carousel">
-                        <div id="carousel-options">
-                            <button id="prev" class="carousel-buttons">
+                <div id="carousel">
+                    <div id="carousel-items" class="items">
+                        <div class="button-container">
+                            <div class="button">
                                 <img src="../public/assets/chevron-left.svg" alt="">
-                            </button>
-                            <h1 id="active-carousel-label">APOLLO 23</h1>
-                            <button id="next" class="carousel-buttons">
+                            </div>
+                            <div class="button">
                                 <img src="../public/assets/chevron-right.svg" alt="">
-                            </button>
+                            </div>
                         </div>
-                        <img src="../public/images/floating-in-space.jpg" id="active-carousel-image" alt="">
                     </div>
                 </div>
 
+
+                </div>
+                <div id="active-mission-sidesheet" class="hidden">
+                </div>
+
                 <div id="active-carousel-indicator">
-                    <span class="carousel-indicator"></span>
-                    <span class="carousel-indicator"></span>
-                    <span class="carousel-indicator"></span>
-                    <span class="carousel-indicator active"></span>
-                    <span class="carousel-indicator"></span>
-                    <span class="carousel-indicator"></span>
-                    <span class="carousel-indicator"></span>
-                    <span class="carousel-indicator"></span>
-                    <span class="carousel-indicator"></span>
                 </div>
             </div>
         </div>
+        <script src="../index.js"></script>
     </body>
     <footer class="global_footer">
     <div class="left-section">
@@ -88,18 +123,26 @@
         <p>2025 DeenoTech. All Rights Reserved</p>
     </div>
     <div class="right-section">
-        <div class="social-media-icons">
-            <img src="../public/assets/x.svg" alt="">
-        </div>
-        <div class="social-media-icons">
-           <img src="../public/assets/instagram.svg" alt="">
-        </div>
-        <div class="social-media-icons">
-            <img src="../public/assets/linkedin.svg" alt="">
-        </div>
-        <div class="social-media-icons">
-            <img src="../public/assets/github.svg" alt="">
-        </div>
+        <a href="https://x.com/ifezue_king" target="_blank">
+            <div class="social-media-icons">
+                <img src="../public/assets/x.svg" alt="">
+            </div>
+        </a>
+        <a href="https://www.instagram.com/ifezue_king/" target="_blank">
+            <div class="social-media-icons">
+                <img src="../public/assets/instagram.svg" alt="">
+            </div>
+        </a>
+        <a href="https://www.linkedin.com/in/nwando-ifezue-979a99273/" target="_blank">
+            <div class="social-media-icons">
+                <img src="../public/assets/linkedin.svg" alt="">
+            </div>
+        </a>
+        <a href="https://github.com/thekingdeeno" target="_blank">
+            <div class="social-media-icons">
+                <img src="../public/assets/github.svg" alt="">
+            </div>
+        </a>
     </div>
     </footer>
         

@@ -1,7 +1,9 @@
+html{
+    margin: 0px;
+}
 body{
     background-color: #000000;
     color: white;
-    
 }
 .global_navbar{
     font-family: Manrope;
@@ -10,7 +12,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    ul{
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
+    div{
         width: 40%;
         display: flex;
         justify-content: space-evenly;
@@ -20,6 +25,10 @@ body{
             a{
                 text-decoration: none;
                 color: white;
+                transition: 200ms;
+                &:hover{
+                    color: rgba(255, 255, 255, 0.748);
+                }
             }
         }
         span{
@@ -27,26 +36,54 @@ body{
         }
     }
 }
+
+
+
 #homepage{
     margin: 0px;
     #main-body{
         background-image: url('../deep_space_website/public/images/horizon_bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        height: 95%;
+        height: 100vh;
         padding: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: 1000px) {
+            display: block;
+            min-height: 100%;
+        }
+        @media screen and (max-width: 500px) {
+            padding: 60px;
+        }
         #left-container{
             font-family: DM Sans;
             width: 50%;
+            @media screen and (max-width: 1000px) {
+                width: 100%;
+            }
+            #large-text-box{
+                @media screen and (max-width: 1000px) {
+                    padding: 40px;
+                    margin-top: 30px;
+                }
+            }
             h1{
                 font-size: 120px;
                 font-weight: bold;
                 padding: 0;
                 margin: 0;
                 line-height: 90%;
+                @media screen and (max-width: 1600px) {
+                    font-size: 100px;
+                }
+                @media screen and (max-width: 1280px) {
+                    font-size: 80px;
+                }
+                @media screen and (max-width: 500px) {
+                    font-size: 60px;
+                }
             }
             h1:last-child{
                 color: #076BB6;
@@ -54,6 +91,9 @@ body{
             #button-container{
                 display: flex;
                 margin: 30px 0px;
+                @media screen and (max-width: 500px) {
+                    justify-content: space-between;
+                }
                 button{
                     width: 30%;
                     padding: 20px;
@@ -66,25 +106,37 @@ body{
                     &:first-child{
                         margin-right: 20px
                     }
+                    transition: 200ms;
+                    &:hover{
+                        color: #f6f6f6cf;
+                        border: 5px solid #0c77c9;
+                        padding: 15px;
+                        cursor: pointer;
+                    }
+                    @media screen and (max-width: 500px) {
+                        font-size: 15px;
+                        padding: 10px;
+                    }
                 }
             }
         };
         #right-container{
             width: 50%;
-            /* height: 100%; */
-            /* background-color: #07B68D; */
+            @media screen and (max-width: 1000px) {
+                width: 100%;
+            }
             #right-inner{
                 background-color: #1B2740;
                 border-radius: 15px;
                 display: flex;
-                /* justify-content: space-evenly; */
+                justify-content: space-around;
                 align-items: center;
                 #page-nav{
                     padding: 20px;
                     display: block;
                     justify-content: center;
                     align-self: center;
-                    width: 40%;
+                    /* width: 40%; */
                     .nav-btns{
                         padding: 40px;
                         margin: 30px 0px;
@@ -92,21 +144,57 @@ body{
                         justify-content: center;
                         align-items: center;
                         border-radius: 15px;
+
+                        @media screen and (max-width: 1400px) {
+                            width: 100px;
+                            height: 100px;
+                            img{
+                                height: 40px;
+                            }
+                            &:hover{
+                                width: 180px;
+                                height: 180px;
+                                img{
+                                    height: 100px;
+                                }
+                            }
+                        }
                     }
                     #apollo-btn{
                         background-color: #7E6EA4;
-                        width: 200px;
-                        height: 200px;
+                        width: 120px;
+                        height: 120px;
                         img{
-                            height: 120px;
+                            height: 60px;
+                            transition: 200ms;
+                        }
+                        transition: 200ms;
+                        &:hover{
+                            width: 200px;
+                            height: 200px;
+                            img{
+                                height: 120px;
+                            }
+                        }
+                        @media screen and (max-width: 1000px) {
+
                         }
                     }
                     #nasa-btn{
                         background-color: #707E9A;
                         width: 120px;
                         height: 120px;
+                        transition: 200ms;
                         img{
                             height: 60px;
+                            transition: 200ms;
+                        }
+                        &:hover{
+                            width: 200px;
+                            height: 200px;
+                            img{
+                                height: 120px;
+                            }
                         }
                     }
                 }
@@ -115,6 +203,9 @@ body{
                     height: 50vh;
                     margin: 40px 0px;
                     position: relative;
+                    @media screen and (max-width: 1000px) {
+                        height: 30vh;
+                    }
                     .slide-boxes{
                         position: absolute;
                         border-radius: 20px;
@@ -163,33 +254,43 @@ body{
     background-size: cover;
     margin: 0px;
     font-family: Manrope;
-    #background-fade{
-        background-color: #000000bf;
+    #background-fade{ 
+        background-color: #000000dc;
         height: 100%;
         width: 100%;
         z-index: -1;
         position: fixed;
     }
     #main-body{
-        padding: 50px;
+        /* padding: 50px;
+        @media screen and (max-width: 1000px) {
+            padding: 20px;   
+        } */
+        margin-top: 50px;
         #top-section{
-            background-color: #040815b6;  
+            background-color: #040815b6;
             border-radius: 10px;
             overflow: hidden;
             position: relative;
             place-content: center;
             justify-content: center;
             align-items: center;
-            margin: 0px;
+            margin: 0px 30px;
             #apollo-logo{
                 position: absolute;
                 width: 100px;
                 right: 0px;
                 margin: 60px;
+                @media screen and (max-width: 1000px) {
+                    width: 60px;
+                }
             }
             #apollo-pic{
                 position: absolute;
                 margin: -500px 0px -100px 0px;
+                @media screen and (max-width: 1000px) {
+                    margin: -500px 0px -100px 0px;
+                }
                 z-index: -1;
                 width: 100%;
                 transform: scaleX(-1);
@@ -205,6 +306,13 @@ body{
                     margin: 0px;
                     line-height: 40px;
                 }
+                 @media screen and (max-width: 1000px) {
+                    margin: 0px;
+                    width: 60%;
+                    .heading{
+                        font-size: 30px;
+                    }
+                }
                 #top-side{
                     display: flex;
                     position: relative;
@@ -219,6 +327,16 @@ body{
                         margin-top: auto;
                         top: 130.5px;
                         left: 113.5px;
+                    }
+                    @media screen and (max-width: 1000px) {
+                        #big-number{
+                            line-height: 100px;
+                            font-size: 130px;
+                        }
+                        #text{
+                            top: 70px;
+                            left: 73px;
+                        }
                     }
                 }
                 #bottom-side{
@@ -239,7 +357,8 @@ body{
                     margin-left: 10px;
                 }
             }
-            #metric-section{
+        }
+            .metric-section{
                 background-color: #707e9a37;
                 display: flex;
                 justify-content: space-between;
@@ -248,6 +367,9 @@ body{
                 margin: auto;
                 margin-bottom: 40px;
                 border-radius: 10px;
+                @media screen and (max-width: 1000px) {
+                    margin-top: 150px;
+                }
                 span{
                     font-size: 60px;
                 }
@@ -262,22 +384,43 @@ body{
                         margin: 0px;
                         line-height: 180px;
                     }
+                @media screen and (max-width: 1000px) {
+                    h5{
+                        font-size: 40px;
+                    }
+                    h1{
+                        font-size: 140px;
+                    }
+                }
+                }
+                &.outside{
+                    margin-top: 30px;
+                }
+                @media screen and (max-width: 1350px) {
+                    &.inside{
+                        display: none;
+                    }
+                }
+                @media screen and (min-width: 1351px) {
+                    &.outside{
+                        display: none;
+                    }
                 }
             }
-        }
         #missions{
             text-align: center; 
-            margin: 200px 0px;
+            margin: 0px 0px 200px 0px;
             #header{
                 font-size: 55px;
                 padding: 30px;
             }
             #carousel-container{
+                /* padding: 40px; */
+                /* overflow: hidden; */
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 100%;
-                margin: 20px 0px;
                 #active-carousel{
                     width: 50%;
                     height: 50%;
@@ -310,6 +453,186 @@ body{
                 }
             }
 
+            #carousel{
+                /* background-color: #7607b6; */
+                padding: 200px 0px 300px 0px;
+                position: relative;
+                .items {
+                    transform: translate(-50%, -50%);
+                    user-select: none;
+                }
+
+                .items .carousel-item {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 40vw;
+                height: 40vh;
+                border-radius: 3%;
+                overflow: hidden;
+                transition: all 300ms ease-in-out;
+                z-index: -1;
+                opacity: 0;
+                .carousel-item-title{
+                    font-size: 50px;
+                }
+                @media screen and (min-width: 700px) and (max-width: 1000px) {
+                    height: 22vh;
+                    width: 60vw;
+                    .carousel-item-title{
+                        font-size: 40px;
+                    }
+                }
+                }
+
+                .carousel-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                }
+
+                .carousel-item.active {
+                opacity: 1;
+                z-index: 99;
+                box-shadow: 0px 0px 105px -35px rgba(244, 244, 244, 0.159);
+                &:hover{
+                    cursor: pointer;
+                }
+                }
+
+                .carousel-item.prev {
+                z-index: 2;
+                opacity: 0.25;
+                transform: translate(-70%, -50%);
+                box-shadow: 0px 0px 105px -35px rgb(64, 116, 245);
+                }
+
+                .carousel-item.next {
+                z-index: 2;
+                opacity: 0.25;
+                transform: translate(-30%, -50%);
+                box-shadow: 0px 0px 105px -35px rgba(219, 31, 31, 0.852);
+                }
+
+                .carousel-item #mission-name{
+                    position: absolute;
+                    z-index: 100;
+                }
+
+                .items  .button-container{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 30vw;
+                z-index: 120;
+                
+                }
+
+                .button-container .button {
+                color: #ffffff;
+                cursor: pointer;
+                position: relative;
+                transition: all 300ms ease-in-out;
+                }
+
+                .button-container .button:hover {
+                    opacity: 1;
+                }
+
+                .button-container .button:before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 50px;
+                height: 50px;
+                /* background-color: rgb(165, 156, 156); */
+                border-radius: 50%;
+                z-index: -99;
+                }
+
+                .button-container .button:nth-child(1) {
+                float: left;
+                }
+
+                .button-container .button:nth-child(2) {
+                float: right;
+                }
+            }
+
+            #active-mission-sidesheet{
+                position: fixed;
+                overflow: hidden;                
+                height: 100%;
+                width: 100%;
+                top: 0px;
+                left: 0px;
+                background-color: #000000;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                transition: 500ms;
+                &.hidden{
+                    width: 0%;
+                    font-size: 0px;
+                    opacity: 0;
+                }
+
+                &.show{
+                    width: 100%;
+                }
+                #section-one{
+                    width: 70%;
+                    max-height: 80%;
+                    overflow: hidden;
+                    img{
+                        width: 70%;
+                        border-radius: 15px;
+                    }
+                }
+                #section-two{
+                    width: 30%;
+                    justify-content: center;
+                    text-align: center;
+                    margin-right: 150px;
+                    button{
+                        border: none;
+                        background-color: transparent;
+                        color: rgb(106, 45, 45);
+                        font-size: 15px;
+                        margin-top: 40px;
+                        padding: 2px;
+                        &:hover{
+                            padding: 0px;
+                            cursor: pointer;
+                            font-size: 17px;
+                            color: rgb(134, 47, 47);
+
+                        }
+                    }
+                    h1{
+                        font-size: 60px;
+                    }
+                    p{
+                        font-size: 30px;
+                    }
+                }
+                @media screen and (max-width: 1000px) {
+                    display: block;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 50px;
+                    #section-one, #section-two{
+                        width: 100%;
+                        p{
+                            padding: 30px;
+                        }
+                    }
+                }
+            }
+
             #active-carousel-indicator{
                 display: flex;
                 justify-content: center;
@@ -322,8 +645,17 @@ body{
                     border-radius: 50%;
                     background-color: #ffffff;
                     margin: 15px;
+                    transition: 500ms;
+                    &:hover{
+                        cursor: pointer;
+                        margin: 13px;
+                        height: 17px;
+                        width: 17px;
+                        transition: 500ms;
+
+                    }
                 }
-                .active{
+                .active-indicator{
                     background-color: #D21111;
                 }
             }
@@ -335,6 +667,7 @@ body{
     background-image: url('../deep_space_website/public/images/nasa-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
     #background-fade{
         background-color: #00000099;
         height: 100%;
@@ -343,7 +676,7 @@ body{
         position: fixed;
     }
     margin: 0px;
-    padding: 0px 40px;
+    /* padding: 0px 40px; */
     font-family: Manrope;
     #main-body{
         margin-top: 50px;
@@ -360,6 +693,9 @@ body{
                     float: left;
                     margin-right: 15px;
                     width: 40%;
+                    @media screen and (max-width: 1000px) {
+                        width: 100%;
+                    }
                     padding: 30px;
                     opacity: 60%;
                     position: relative;
@@ -375,6 +711,9 @@ body{
                 }
                 #text-container{
                     padding: 30px;
+                    @media screen and (max-width: 1000px) {
+                        font-size: 20px;
+                    }
                 }
             }
         }
@@ -395,7 +734,12 @@ body{
             }
         }
         #space-shuttles{
-            padding: 50px;
+            .opened{
+                display: initial;
+            }
+            .closed{
+                display: none;
+            }
             width: 100%;
             display: flex;
             justify-content: center;
@@ -422,6 +766,12 @@ body{
                     align-items: center;   
                     border-radius: 10px;
                     margin: 10px;
+                    transition: 500ms;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: #00000044; 
+                        transition: 500ms;
+                    }
                     img{
                         position: absolute;
                         margin: auto;
@@ -516,22 +866,149 @@ body{
                     }
                 }
             }
-            
+            @media screen and (max-width: 1100px) {
+                display: none;
+            }
+        }
+
+        #space-shuttle_mobile{
+            @media screen and (min-width: 1101px) {
+                display: none;
+            }
+            #header-div{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 20px;
+                .text-box{
+                    height: 100%;
+                    border-radius: 10px;
+                }
+                #text-box-1{
+                    grid-column: span 2;
+                    display: flex;
+
+                    #text-container{
+                        margin-top: auto;
+                        padding: 10px;
+                        h1{
+                            font-size: 50px;
+                            margin: 0px;
+                        }
+                    }
+                }
+                #text-box-2{
+                    grid-row: span 2;
+                    display: flex;
+                    #text-box-2_wrapper{
+                        margin: auto;
+                        h1{
+                            font-size: 60px;
+                            margin: 0px;
+                        }
+                        p{
+                            font-size: 20px;
+                            margin: 0px;
+                        }
+                        #missions-metric{
+                            h1{
+                                color: #6B75FF;
+                            }
+                        }
+                        #shuttles-metric{
+                            h1{
+                                color: #278EDC;
+                            }
+                        }
+                    }
+                }
+            }
+            #data-div{
+                    margin: 20px;
+                .shuttle-box{
+                    background-color: #0000008b;  
+                    height: 15vh;
+                    width: 100%;
+                    overflow: hidden;
+                    position: relative;
+                    margin: 30px 0px;
+                    border-radius: 10px;
+                    /* place-content: center; */
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        position: absolute;
+                        margin-bottom: auto; 
+                        width: 100%;
+                        z-index: -1;
+                        margin-top: -25%;
+                    }
+                    .intext-box{
+                        position: absolute;
+                        width: 100%;
+                        text-align: left;
+                        top: 0px;
+                        padding: 20px;
+                        h3{
+                            font-size: 35px;
+                            font-weight: bold;
+                            margin: 0px;
+                        }
+                        p{
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 900;
+                        }
+                    } 
+                }
+            }
+        }
+
+        #space-shuttle-overlay{
+            display: none;
+            position: fixed;
+            background-color: #000000;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: 400ms;
+            img{
+                width: 100%;
+            }
         }
 
         #space-station{
             display: flex;
             justify-content:center;
             padding: 100px;
+            @media screen and (max-width: 1000px) {
+                display: block;
+            }
             #image{
                 background-color: #000000;
                 width: 40%;
+                @media screen and (max-width: 1000px) {
+                    width: 100%;
+                    overflow: hidden;
+                    border-radius: 10px;
+                }
                 margin-right: 30px;
                 position: relative;
                 #text-container{
                     position: absolute;
                     bottom: 0px;
                     padding: 20px;
+                    @media screen and (max-width: 1000px) {
+                        display: flex;
+                        justify-content: space-evenly;
+                        width: 100%;
+                    }
                     h1{
                         font-size: 70px;
                         margin: 0%;
@@ -541,22 +1018,28 @@ body{
                 img{
                     width: 100%;
                     opacity: 50%;
+                    @media screen and (max-width: 1000px) {
+                        margin: -180px 0px;
+                    }
                 }
             }
             #text{
                 width: 40%;
+                @media screen and (max-width: 1000px) {
+                    width: 100%;
+                    text-align: center;
+                }
             }
         }
 
         #nasa-iotd{
             width: 100%;
             text-align: center;
-            margin-top: 300px;
-            h1{
-                padding: 30px;
-            }
+            overflow: hidden;
+
             img{
                 border-radius: 10px;
+                width: 90%;
             }
         }
     }
@@ -579,9 +1062,19 @@ body{
     };
     #main-body{
         padding: 30px 100px;
-        margin: 50px 100px 200px 100px;
+        margin: 100px 100px 200px 100px;
+                height: 70vh;
+        @media screen and (max-width: 1000px){
+            margin: 0px;
+            margin-top: 50px;
+            min-height: 75%;
+        }
+        
         #top-container{
             width: 50%;
+            @media screen and (max-width: 1000px) {
+                    width: 80%;
+                }
             #title{
                 font-size: 100px;
                 margin: 0px
@@ -589,14 +1082,24 @@ body{
             #subheading{
                 font-size: 25px;
                 width: 50%;
+                @media screen and (max-width: 1000px) {
+                    width: 100%;
+                }
             };
         }
         #bottom-container{
             display: flex;
             justify-content: space-between;
             align-items: end;
+            @media screen and (max-width: 1000px) {
+                display: block;
+                justify-content: center;
+            }
             #form-container{
                 width: 45%;
+                @media screen and (max-width: 1000px) {
+                    width: 100%;
+                }
                 form{
                     margin: 0px;
                 }
@@ -611,8 +1114,14 @@ body{
                         font-size: 18px;
                         width: 100%;
                         color: #ffffff;
+                        @media screen and (max-width: 1000px) {
+                            font-size: 30px;
+                        }
                         &::placeholder{
                             color: #ffffff;
+                        }
+                        &:focus{
+                                outline-width: 0;
                         }
                     }
                 }
@@ -624,10 +1133,20 @@ body{
                     margin-top: 10px;
                     background-color: #696969;
                     color: #ffffff;
+                    @media screen and (max-width: 1000px) {
+                        margin-bottom: 100px;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
                 }
             }
             #contact-details{
                 width: 40%;
+                @media screen and (max-width: 1000px) {
+                    width: 100%;
+                    font-size: 30px;
+                }
                 #details{
                     .detail{
                         line-height: 50%;
@@ -668,8 +1187,15 @@ body{
         position: fixed;
     };
     #main-body{
-        margin: 60px;
-        min-height: 50%;
+        padding: 30px 100px;
+        margin: 100px 100px 200px 100px;
+        height: 70vh;
+        @media screen and (max-width: 1000px){
+            margin: 0px;
+            margin-top: 50px;
+            min-height: 100%;
+        }
+
         #content{
             width: 65%;
             h1{
@@ -677,6 +1203,15 @@ body{
             }
             p{
                 font-size: 20px;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            min-height: 75%;
+            #content{
+                width: 100%;
+                p{
+                    font-size: 30px;
+                }
             }
         }
     }
@@ -688,6 +1223,10 @@ body{
     display: flex;
     align-items: center;
     font-family: Manrope;
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    float: bottom;
     .left-section{
         padding: 50px;
         width: 50%;
@@ -697,6 +1236,11 @@ body{
             h1{
                 font-size: 40px;
                 margin: 0px;
+            }
+            @media screen and (max-width: 1050px) {
+                h1{
+                    margin: 0px 50px;
+                }
             }
             img{
                 height: 50px;
@@ -713,5 +1257,77 @@ body{
         .social-media-icons{
             margin: 30px;
         }
+    }
+    @media screen and (max-width: 1050px) {
+        display: block;
+        /* margin: 150px; */
+        background-color: #000000;
+        .left-section,.right-section {
+            padding: 0px;
+            width: 100%;
+            p{
+                font-size: 25px;
+                margin: 0px 50px;
+            }
+            img{
+                height: 50px;
+                margin: 20px;
+            }
+        }
+    }
+}
+
+.global_hamburger-menu{
+    width: 100%;
+    display: none;
+    @media screen and (max-width: 1000px) {
+        display: initial;
+    }
+    .main-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000000;
+
+        .hamburger-icon{
+            margin: 30px
+        };
+        .hamburger-logo{
+            margin: 30px;
+            img{
+                border-radius: 50%;
+                height: 50px;
+            }
+        };
+    }
+    .sub-navbar-content {
+            display: block;
+            background-color: #000000;
+            transition: 500ms;
+            position: absolute;
+            width: 100%;
+            margin: 0px;
+            padding-bottom: 30px;
+            z-index: 1;
+            &.opened{
+                transition: 500ms;
+            }
+            &.closed{
+                transition: 500ms;
+
+                height: 0px;
+                display: none;
+                overflow: hidden;
+                margin: 0px;
+            }
+            li{            
+                list-style: none;
+                padding: 20px 20px;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    font-size: 30px;
+                }
+            }
     }
 }

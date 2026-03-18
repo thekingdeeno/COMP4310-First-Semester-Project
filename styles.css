@@ -682,7 +682,7 @@ body{
         margin-top: 50px;
         height: 100%;
         #intro{
-            margin: 30px;
+            margin: 30px 200px;
             overflow: hidden;
             h1{
                 text-align: center;
@@ -728,7 +728,9 @@ body{
                 text-align: center;
             }
             #list-container{
+                text-align: center;
                 li{
+                    list-style: none;
                     margin: 20px;
                 }
             }
@@ -1046,7 +1048,7 @@ body{
 }
 
 #contact-page{
-    background-image: url('/deep_space_website/public/images/contact-bg.jpg');
+    background-image: url('../deep_space_website/public/images/contact-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1172,7 +1174,7 @@ body{
 }
 
 #references-page{
-    background-image: url('/deep_space_website/public/images/references-bg.jpg');
+    background-image: url('../deep_space_website/public/images/references-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
